@@ -1,6 +1,6 @@
 # merncrud022-backend
 
--   this is an external fork of [Starter: Fullstack MERN site which allows user to add/edit/delete items via CRUD API using MongoDB and TypeScript/ES6-Modules on frontend/backend](https://starters.tanguay.eu/list/mernMongooseBookCrudFullstack)
+this is an external fork of [Starter: Fullstack MERN site which allows user to add/edit/delete items via CRUD API using MongoDB and TypeScript/ES6-Modules on frontend/backend](https://starters.tanguay.eu/list/mernMongooseBookCrudFullstack)
 
 ## it adds the following features:
 
@@ -8,6 +8,25 @@
   - so the admin password is now secured with a bcrypt hash
 - (2) **MONGDB_CONNECTION** password is no longer in plain text in the .env file
   - instead it has been replaced with **MONGODB_CONNECTION_PASSWORD_HASH** in the .env file
-  -   to set the hash, search for **SECRETKEY** and set it in two files
-    -   run `npm run encrypt` with your password
-    -   copy the resulting hash into the .env file
+  - to set the hash, search for **SECRETKEY** and set it in two files
+  - run `npm run encrypt` with your password
+  - copy the resulting hash into the .env file
+
+## .env file
+
+``` text
+APP_NAME = Book Site API
+SECONDS_TILL_SESSION_TIMEOUT = 3600
+PORT = 5030
+MONGODB_CONNECTION = mongodb+srv://ejt-admin:===PASSWORD===@cluster0.ogshn.mongodb.net/bookapi?retryWrites=true&w=majority
+MONGODB_CONNECTION_ENCRYPTED_PASSWORD = NNNNNNNNNNNNNNNNNNNNN 
+SESSION_SECRET = NNNNNNNNNNNNNNNN
+ADMIN_HASH = NNNNNNNNNNNNNNNNNNNNNNNNNNN
+FRONTEND_URL = http://localhost:5031
+NODE_ENVIRONMENT = development
+```
+
+## useful scripts
+
+- `npm run encrypt` - creates encrypted password for the MongoDB connection string
+- `npm run bcrypt` - creates the hash of the admin password

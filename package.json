@@ -10,7 +10,8 @@
 		"setup": "pm2 start --name et-mern-crud-site-backend npm -- start",
 		"start": "node dist/server.js",
 		"deploy": "git pull --no-rebase && npm i && npm run build && pm2 restart et-mern-crud-site-backend --update-env --time && pm2 save",
-		"encrypt": "node dev/encryptMongoDbPassword.mjs"
+		"encrypt": "node dev/encrypt.mjs",
+		"bcrypt": "node dev/bcrypt.mjs"
 	},
 	"nodemonConfig": {
 		"watch": [

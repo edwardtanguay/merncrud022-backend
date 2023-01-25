@@ -19,5 +19,5 @@ export const FRONTEND_URL = process.env.FRONTEND_URL;
 export const NODE_ENVIRONMENT = process.env.NODE_ENVIRONMENT;
 
 const mongodbConnectionTemplate = process.env.MONGODB_CONNECTION;
-const password = cryptr.decrypt(process.env.MONGODB_CONNECTION_PASSWORD_HASH);
+const password = cryptr.decrypt(process.env.MONGODB_CONNECTION_ENCRYPTED_PASSWORD);
 export const MONGODB_CONNECTION = mongodbConnectionTemplate.replace(/===PASSWORD===/,password);
