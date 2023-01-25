@@ -15,7 +15,7 @@ this is an external fork of [Starter: Fullstack MERN site which allows user to a
 APP_NAME = Book Site API
 SECONDS_TILL_SESSION_TIMEOUT = 3600
 PORT = 5030
-MONGODB_CONNECTION = mongodb+srv://ejt-admin:===PASSWORD===@cluster0.ogshn.mongodb.net/bookapi?retryWrites=true&w=majority
+MONGODB_CONNECTION = mongodb+srv://NNNNNNN:===PASSWORD===@cluster0.NNNNNN.mongodb.net/NNNNNNNNNNNNN?retryWrites=true&w=majority
 MONGODB_CONNECTION_ENCRYPTED_PASSWORD = NNNNNNNNNNNNNNNNNNNNN 
 SESSION_SECRET = NNNNNNNNNNNNNNNN
 ADMIN_HASH = NNNNNNNNNNNNNNNNNNNNNNNNNNN
@@ -23,7 +23,14 @@ FRONTEND_URL = http://localhost:5031
 NODE_ENVIRONMENT = development
 ```
 
-## useful scripts
+## change all NNNNNNN values
 
-- `npm run encrypt` - creates encrypted password for the MongoDB connection string (be sure to change **SECRET_KEY** in the two files)
-- `npm run bcrypt` - creates the hash of the admin password
+- MongoDB username
+- mongoDB URL
+- encrypted password
+  - `npm run encrypt`
+  - be sure to change **SECRET_KEY** in the two files
+- session secret
+  - just type in a random string
+- admin_hast
+  - `npm run bcrypt` - creates the hash of the admin password
