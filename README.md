@@ -8,9 +8,6 @@ this is an external fork of [Starter: Fullstack MERN site which allows user to a
   - so the admin password is now secured with a bcrypt hash
 - (2) **MONGDB_CONNECTION** password is no longer in plain text in the .env file
   - instead it has been replaced with **MONGODB_CONNECTION_PASSWORD_HASH** in the .env file
-  - to set the hash, search for **SECRETKEY** and set it in two files
-  - run `npm run encrypt` with your password
-  - copy the resulting hash into the .env file
 
 ## .env file
 
@@ -28,5 +25,5 @@ NODE_ENVIRONMENT = development
 
 ## useful scripts
 
-- `npm run encrypt` - creates encrypted password for the MongoDB connection string
+- `npm run encrypt` - creates encrypted password for the MongoDB connection string (be sure to change **SECRET_KEY** in the two files)
 - `npm run bcrypt` - creates the hash of the admin password
