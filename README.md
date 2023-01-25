@@ -26,7 +26,8 @@ NODE_ENVIRONMENT = development
 ## change all NNNNNNN values
 
 - MongoDB username
-- mongoDB URL
+- MongoDB URL
+- MongoDB database name
 - encrypted password
   - `npm run encrypt`
   - be sure to change **SECRET_KEY** in the two files
